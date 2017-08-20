@@ -5,7 +5,13 @@
             enabled: true,
             requireBase: false
         });
-    }
+      }
+
+        angular
+               .module('blocJams', ['ui.router'])
+               .config(config);
+       })();
+
    $stateProvider
          .state('landing', {
              url: '/',
@@ -15,9 +21,7 @@
                url: '/album',
                templateUrl: '/templates/album.html'
            });
-
-
-           angular
-                  .module('blocJams', ['ui.router'])
-                  .config(config);
-          })();
+           .state('collection', {
+           url: '/collection',
+           templateUrl: '/templates/collection.html'
+         });
