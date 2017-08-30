@@ -25,6 +25,7 @@
          };
 
          SongPlayer.play = function(song) {
+           console.log("Please Play");
              if (currentSong !== song) {
                  setSong(song);
                  currentBuzzObject.play();
